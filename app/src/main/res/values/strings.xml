@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MovilePayTest</string>
+    <string name="default_welcome">Olá, tudo bem?</string>
+
+    <!-- Credit Card -->
+    <string name="avaliable_limit">Limite disponível: %1s</string>
+    <string name="total_limit">Limite total: %1s</string>
+    <string name="total_cash">R$ 0,000</string>
+
+    <!-- Response Error-->
+    <string name="default_response_text">Ops, algo deu errado,<br>tente novamente mais tarde</br></string>
+    <string name="content_description_btn_close">Botão fechar</string>
+    <string name="location_name">Restaurante </string>
+</resources>

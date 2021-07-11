@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.fernando.movilepaytest.feature.main.view.HomeFragment">
+
+        <action
+            android:id="@+id/action_homeFragment_to_CreditCardFragment"
+            app:destination="@id/creditCardFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="key_widget_id"
+                app:argType="string"
+                android:defaultValue="0"/>
+        </action>
+
+        <action
+            android:id="@+id/action_homeFragment_to_statementFragment"
+            app:destination="@id/statementFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+        <argument
+            android:name="key_widget_id"
+            app:argType="string"
+            android:defaultValue="0"/>
+        </action>
+        <action
+            android:id="@+id/action_homeFragment_to_responseErrorFragment"
+            app:destination="@id/responseErrorFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/creditCardFragment"
+        android:name="com.fernando.creditcard.feature.home.view.CreditCardFragment"
+        android:label="Cartão"/>
+
+    <fragment
+        android:id="@+id/statementFragment"
+        android:name="com.fernando.movilepaytest.feature.statement.view.StatementFragment"
+        android:label="Extrato" />
+
+    <fragment
+        android:id="@+id/responseErrorFragment"
+        android:name="com.fernando.movilepaytest.feature.error.view.ResponseErrorFragment"
+        android:label="Voltar para Home"/>
+
+</navigation>
